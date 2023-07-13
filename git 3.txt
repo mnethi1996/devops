@@ -1,0 +1,17 @@
+Git  rebase
+==============
+This is called as fastforward merge.
+The commits from the child branch are added to the top of the master branch.
+This is helpful when we want code from a branch to be reflected as the latest working version on master.
+
+
+Rearrange the commit order
+---------------------------
+git rebase -i HEAD~4
+
+
+Merge the commit's using "squash"
+--------------------------------
+git rebase -i HEAD~4
+Remove the pick word and replace it with squash
+

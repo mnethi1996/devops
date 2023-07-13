@@ -1,0 +1,93 @@
+++++++++++++++++++
+
+
+How to selectively pickup the commit's from child branch ( Cherry-pick )
+
+$ git  cherry-pick   7fed4ce    86f93d2     ( commit id's)
+
+
+
+Git stash
+-----------
+
+
+git  init
+touch  f1   f2
+git  add  .
+git  commit  -m "a"
+
+touch  f3    f4
+git  add .
+touch   f5     f6   
+
+git  status  (  2  staged file,   2  untracked files )
+
+
+
+
+
+git  stash
+git  status  (   2  untracked files )
+git  add .
+git  commit  -m "b"
+
+git  status  (  Working tree is clean  )
+
+git  stash  pop  
+git  status   (  2  staged  files )
+
+git commit  -m  "c"
+
+touch   f7   f8
+git  add .
+touch   f9  f10
+git  status   (  2  staged , 2 untracked )
+
+git  stash  -u  
+git  status  ( Working tree is clean )
+
+++++++++++++++++++++++++
+Notes:
+This feature is used for leaving unfinished work, in such a way that Git cannot access it and continue  work on some other files.
+
+Further commands of git should be able to process only  the new files.
+This can be done using git stash.
+
+Commands
+--------------------
+1) To stash  the stagged files
+ $  git  stash
+
+2) To stash  staged and untracked files
+$  git  stash  -u
+
+3) To see the list of stashes
+    git  stash  list
+
+4) TO get back the stashed files
+   git  stash pop
+
+5) to bring the older stash  out
+  git  stash  pop  stash@{stash_number}
+
+
+
++++++++++++++++++++++
+
+Git Ammend
+----------------
+
+$ git commit  --amend  -m "b"
+
+
+How to go back to previous version of code
+----------------------------------------------
+git reset --hard f1cd7c3
+
+
+
+git remote add origin https://github.com/sunildevops77/rep22.git
+
+git push -u origin master
+
+

@@ -1,0 +1,117 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Version control systems are tools that help a software team manage changes to source code over time.
+
+For almost all software projects, the source code is like the crown jewels - a precious asset whose value must be protected. 
+
+VCS are sometimes known as SCM (Source Code Management) tool.
+
+Most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open source tool originally developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. 
+
+Two types Version Controlloing
+1) Centrailized Version controlling 
+2) Distributed Version controlling
+
+Git is Distributed Version controlling.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+What is gitbash ?
+
+How to configure username and email for git
+
+$ git init
+
+$ git config --global   user.name "chandhru"
+$ git config --global   user.email  "chandhru789@gmail.com"
+
+ TO check the configurations
+$ git config  --global  --list
+
+working directory ------> staging area -------> LR
+
+untracked files
+staged files
+commited files
+
++++++++++++++
+
+How to make working directory as git repository
+
+$ git init
+
+-Observation -
+
+++++++++++++++++
+
+$  git status
+
++++++++++++++++++
+To move file to staging area
+
+$ git  add  f1
+
+$  git  add   f2  f3
+
+$ git  add  .
+
+
+++++++++++++++++
+Bring file back to untracked section
+
+$ git rm  --cached f1
+
+or
+
+$ git reset  f2 
+
+++++++++++++++++++++
+To move the files from staging are to LR
+
+$ git  commit  -m  "first commit"
+
+$ git status
+
++++++++++++++++++++
+To see the list of commit
+
+$ git log
+
++++++++++++++++++++
+remaining files I want to move to LR
+
+$ git  add .
+$ git commit -m  "second commit"
+
+$ git log
+(or)
+git log --oneline
+
+
+$  git status
+
+++++++++++++++++++
+Notes
+1) Setting username and email
+
+2) As per git , there are three comopnents
+working directory  --  untracked files
+staging area  -- staged files
+LR  -- commited files
+
+3) commands 
+To initilize working directory as git repo
+To move files to staging are
+To bring back files from staging to untracked sectiion
+To move files from staging to LR
+To check the status of untracked files and staged files
+To see the commit history
+
+
+
+
+git remote add origin https://github.com/chandrababu999/myproject.git
+
+
+

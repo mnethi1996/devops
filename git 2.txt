@@ -1,0 +1,39 @@
+Branching
+--------------
+
+This feature is provided in git, so that developers can create code related to different functionalities  on seprate branches.
+This helps the development team in creating the code in an uncluttered way.
+Later this code can be merged with master branch.
+Default branch of git is "Master"
+
+
+Developer
+
+Home Page   --  f1  f2   f3
+Services   --  f4  f5
+Contact US  --  f6  f7   f8
+
+branch
+
+
+git  init  --  master
+
++++++++++++++++++++++++++++++++++
+
+
+git branch  branchname 
+
+git  branch test
+
+++++++++++++++
+
+how many braches 
+
+git branch
+
+
+Remote repository  ( Github )
+
+Git rebase
+
+
