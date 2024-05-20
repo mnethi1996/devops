@@ -1,9 +1,9 @@
 name: Enforce Branch Naming Convention
 
 on:
-  create:
+  push-Request:
     branches:
-      - "*"
+      - "**"
 
 jobs:
   check-branch-name:
