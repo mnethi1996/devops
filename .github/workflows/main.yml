@@ -1,9 +1,8 @@
 name: Enforce Branch Naming Convention
 
 on:
-  push:
-    branches:
-      - "**"
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   check-branch-name:
@@ -14,9 +13,9 @@ jobs:
 
       - name: Validate branch name
         env:
-          BRANCH_NAME: ${{ github.ref }}
+          BRANCH_NAME: ${{ github.head_ref }}
         run: |
-          if [[ ! "$BRANCH_NAME" =~ ^(refs/heads/)?(feature|hotfix|bugfix)-cwis-[0-9]{4}-[a-zA-Z0-9-]{1,20}$ ]]; then
+          if [[ ! "$BRANCH_NAME" =~ ^(feature|hotfix|bugfix)-cwis-[0-9]{4}-[a-zA-Z0-9-]{1,20}$ ]]; then
             echo "Invalid branch name: $BRANCH_NAME"
             echo "Branch names should follow the pattern: (feature|hotfix|bugfix)-cwis-1234-short-20-char-text"
             exit 1
